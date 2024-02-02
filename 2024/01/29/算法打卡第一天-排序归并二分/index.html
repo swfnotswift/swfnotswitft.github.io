@@ -1,23 +1,65 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>算法打卡第一天--排序归并二分 · Hexo</title><meta name="description" content="一些碎碎念从今天开始进行寒假算法集训QAQ，从数据结构学习完成之后就没有碰过C++，重新拿起来，还有一种比较陌生的感觉。顺带借此机会学习一下博客的搭建，尝试培养一下写博客的习惯，顺带接受网友们的监督，看看自己能够坚持几天（笑死
-每日任务：题目背板子
-排序快排基于分治算法
-主要步骤
-确定分界点:
-调整"><meta name="og:description" content="一些碎碎念从今天开始进行寒假算法集训QAQ，从数据结构学习完成之后就没有碰过C++，重新拿起来，还有一种比较陌生的感觉。顺带借此机会学习一下博客的搭建，尝试培养一下写博客的习惯，顺带接受网友们的监督，看看自己能够坚持几天（笑死
-每日任务：题目背板子
-排序快排基于分治算法
-主要步骤
-确定分界点:
-调整"><meta name="twitter:site" content="Hexo"><meta name="twitter:title" content="算法打卡第一天--排序归并二分"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.1.1"><link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">From Swift</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">博客而已</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li><a href="/about/index.html">about</a></li><li class="soc"><a href="https://github.com/swfnotswift" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="http://example.com/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="http://example.com" rel="noopener noreferrer">John Doe</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>算法打卡第一天--排序归并二分</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-01-29</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/寒假算法打卡/" title="寒假算法打卡">寒假算法打卡</a><span>&nbsp;</span></span></p><p class="post-abstract"><h1 id="一些碎碎念"><a href="#一些碎碎念" class="headerlink" title="一些碎碎念"></a>一些碎碎念</h1><p>从今天开始进行寒假算法集训QAQ，从数据结构学习完成之后就没有碰过C++，重新拿起来，还有一种比较陌生的感觉。顺带借此机会学习一下博客的搭建，尝试培养一下写博客的习惯，顺带接受网友们的监督，看看自己能够坚持几天（笑死<img src="/2024/01/29/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%B8%80%E5%A4%A9-%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E4%BA%8C%E5%88%86/05A63E67.png"></p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>算法打卡第一天--排序归并二分 · Hexo</title><meta name="description" content="[[#每日任务：|每日任务：]]
+[[#快排|快排]]
+[[#快排#主要步骤|主要步骤]]
+[[#快排#几种做法|几种做法]]
+[[#几种做法#第一种|第一种]]
+[[#几种做法#第二种|第二种]]
+
+
+[[#快排#模版|模版]]
+[[#模版#模版题打卡|模版题打卡]]
+
+
+[[#快排#归并排序|归"><meta name="og:description" content="[[#每日任务：|每日任务：]]
+[[#快排|快排]]
+[[#快排#主要步骤|主要步骤]]
+[[#快排#几种做法|几种做法]]
+[[#几种做法#第一种|第一种]]
+[[#几种做法#第二种|第二种]]
+
+
+[[#快排#模版|模版]]
+[[#模版#模版题打卡|模版题打卡]]
+
+
+[[#快排#归并排序|归"><meta name="twitter:site" content="Hexo"><meta name="twitter:title" content="算法打卡第一天--排序归并二分"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.1.1"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">From Swift</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">博客而已</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li><a href="/about/index.html">about</a></li><li class="soc"><a href="https://github.com/swfnotswift" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="http://example.com/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="http://example.com" rel="noopener noreferrer">John Doe</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>算法打卡第一天--排序归并二分</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-01-29</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/寒假算法打卡/" title="寒假算法打卡">寒假算法打卡</a><span>&nbsp;</span></span></p><p class="post-abstract"><ul>
+<li>[[#每日任务：|每日任务：]]</li>
+<li>[[#快排|快排]]</li>
+<li>[[#快排#主要步骤|主要步骤]]</li>
+<li>[[#快排#几种做法|几种做法]]<ul>
+<li>[[#几种做法#第一种|第一种]]</li>
+<li>[[#几种做法#第二种|第二种]]</li>
+</ul>
+</li>
+<li>[[#快排#模版|模版]]<ul>
+<li>[[#模版#模版题打卡|模版题打卡]]</li>
+</ul>
+</li>
+<li>[[#快排#归并排序|归并排序]]<ul>
+<li>[[#归并排序#模板|模板]]</li>
+<li>[[#归并排序#模板题打卡|模板题打卡]]</li>
+</ul>
+</li>
+<li>[[#二分算法|二分算法]]</li>
+<li>[[#整数二分|整数二分]]</li>
+<li>[[#整数二分#适用范围|适用范围]]</li>
+<li>[[#整数二分#算法思路|算法思路]]</li>
+<li>[[#整数二分#模板|模板]]</li>
+<li>[[#整数二分#模板题打卡|模板题打卡]]</li>
+<li>[[#整数二分#浮点数二分|浮点数二分]]</li>
+</ul>
+<h1 id="一些碎碎念"><a href="#一些碎碎念" class="headerlink" title="一些碎碎念"></a>一些碎碎念</h1><hr>
+<p>从今天开始进行寒假算法集训QAQ，从数据结构学习完成之后就没有碰过C++，重新拿起来，还有一种比较陌生的感觉。顺带借此机会学习一下博客的搭建，尝试培养一下写博客的习惯，顺带接受网友们的监督，看看自己能够坚持几天（笑死<img src="/2024/01/29/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%B8%80%E5%A4%A9-%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E4%BA%8C%E5%88%86/05A63E67.png"></p>
 <h3 id="每日任务："><a href="#每日任务：" class="headerlink" title="每日任务："></a>每日任务：</h3><p>题目<br>背板子</p>
-<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h2><p>基于分治算法</p>
+<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h2><hr>
+<p>基于分治算法</p>
 <h3 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h3><ol>
 <li>确定分界点:</li>
 <li>调整 区间:<br> 比x小的在x左边，比x大的在x后面</li>
 <li>递归处理左右两边</li>
 </ol>
-<h2 id="几种做法"><a href="#几种做法" class="headerlink" title="几种做法"></a>几种做法</h2><h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4><pre><code>创建两个数组，后面再合并
+<h3 id="几种做法"><a href="#几种做法" class="headerlink" title="几种做法"></a>几种做法</h3><h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4><pre><code>创建两个数组，后面再合并
 </code></pre>
 <p><img src="/2024/01/29/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%B8%80%E5%A4%A9-%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E4%BA%8C%E5%88%86/Pasted%20image%2020240129145657.png" alt="图片1"></p>
 <h4 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h4><pre><code>两个指针同时向中间移动发现左右有都不满足的进行交换
