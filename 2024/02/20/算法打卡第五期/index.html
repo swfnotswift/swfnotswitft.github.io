@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>算法打卡第五期 · Hexo</title><meta name="description" content="Tier
+Trie树，用于快速存储和查找字符串集合的函数 存储字符串的方法 abcdef
+abdef aced bcff ## 并查集 1.将两个 集合合并
+2.询问两个元素是否在一个集合当中
+belong[x]=a if(belong[x] == belong[y])(o1)
+ ###"><meta name="og:description" content="Tier
+Trie树，用于快速存储和查找字符串集合的函数 存储字符串的方法 abcdef
+abdef aced bcff ## 并查集 1.将两个 集合合并
+2.询问两个元素是否在一个集合当中
+belong[x]=a if(belong[x] == belong[y])(o1)
+ ###"><meta name="twitter:site" content="Hexo"><meta name="twitter:title" content="算法打卡第五期"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.1.1"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">From Swift</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">博客而已</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li><a href="/about/index.html">about</a></li><li class="soc"><a href="https://github.com/swfnotswift" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="http://example.com/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="http://example.com" rel="noopener noreferrer">John Doe</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>算法打卡第五期</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-02-20</span></p><p class="post-abstract"><h2 id="tier">Tier</h2>
+<p>Trie树，用于快速存储和查找字符串集合的函数 存储字符串的方法 abcdef
+abdef aced bcff ## 并查集 1.将两个 集合合并
+2.询问两个元素是否在一个集合当中</p>
+<p>belong[x]=a if(belong[x] == belong[y])(o1)</p>
+<p><img src="/2024/02/20/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%BA%94%E6%9C%9F/Pasted%20image%2020240221162028.png"> ###
+基本原理
+每个集合用一颗树表示，树的编号就是整个集合的编号，每个节点存储它的父节点，p[x]表示x的父节点
+1. 判断树根： if(p[x] == x) 2. 如何求x的集合编号：while(p[x]!=x) x=p[x];
+3. 如何合并两个集合：p[x]是x的集合编号，p[y]是y的集合编号。p[x]=y <img src="/2024/02/20/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%BA%94%E6%9C%9F/Pasted%20image%2020240221162817.png"></p>
+<p>==优化：路径压缩 优化第二步，使所有节点直接指向根节点</p>
+<h2 id="堆手写版">堆（手写版）</h2>
+<p>是一颗完全二叉树，最后一排从左往右排序，子节点小于等于或大于等于父节点</p>
+<h3 id="作用">作用</h3>
+<ol type="1">
+<li>插入一个数</li>
+<li>求集合当中的最小值</li>
+<li>删除最小值</li>
+<li>删除任意一个元素</li>
+<li>修改任意元素 ### 如何建堆 <img src="/2024/02/20/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%BA%94%E6%9C%9F/堆.png"></li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// h[N]存储堆中的值, h[1]是堆顶，x的左儿子是2x, 右儿子是2x + 1</span></span><br><span class="line"><span class="comment">// ph[k]存储第k个插入的点在堆中的位置</span></span><br><span class="line"><span class="comment">// hp[k]存储堆中下标是k的点是第几个插入的</span></span><br><span class="line"><span class="type">int</span> h[N], ph[N], hp[N], size;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 交换两个点，及其映射关系</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">heap_swap</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">swap</span>(ph[hp[a]],ph[hp[b]]);</span><br><span class="line">    <span class="built_in">swap</span>(hp[a], hp[b]);</span><br><span class="line">    <span class="built_in">swap</span>(h[a], h[b]);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">down</span><span class="params">(<span class="type">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> t = u;</span><br><span class="line">    <span class="keyword">if</span> (u * <span class="number">2</span> &lt;= size &amp;&amp; h[u * <span class="number">2</span>] &lt; h[t]) t = u * <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span> (u * <span class="number">2</span> + <span class="number">1</span> &lt;= size &amp;&amp; h[u * <span class="number">2</span> + <span class="number">1</span>] &lt; h[t]) t = u * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (u != t)</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">heap_swap</span>(u, t);</span><br><span class="line">        <span class="built_in">down</span>(t);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">up</span><span class="params">(<span class="type">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">while</span> (u / <span class="number">2</span> &amp;&amp; h[u] &lt; h[u / <span class="number">2</span>])</span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">heap_swap</span>(u, u / <span class="number">2</span>);</span><br><span class="line">        u &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// O(n)建堆</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = n / <span class="number">2</span>; i; i -- ) <span class="built_in">down</span>(i);</span><br></pre></td></tr></table></figure>
+<h2 id="几种基本操作">几种基本操作</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//down操作</span></span><br><span class="line"><span class="comment">//总体方法为挑选树根和两个还在中最小的，保证树根小于其两个儿子。如果需要交换的话再递归进行交换</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">down</span><span class="params">(<span class="type">int</span> u)</span></span>{</span><br><span class="line">	<span class="type">int</span> t =u;</span><br><span class="line">	<span class="keyword">if</span>(u*<span class="number">2</span>&lt;=size&amp;&amp;h[u*<span class="number">2</span>]&lt;h[t])t=<span class="number">2</span>*u;</span><br><span class="line">	<span class="keyword">if</span>(u*<span class="number">2</span>+<span class="number">1</span>&lt;=size&amp;&amp;h[u*<span class="number">2</span>+<span class="number">1</span>]&lt;h[t])t=<span class="number">2</span>*u+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(t!=u){</span><br><span class="line">	<span class="built_in">swap</span>(h[t],h[u]);</span><br><span class="line">	<span class="built_in">down</span>(t);</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//up操作</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">up</span><span class="params">(<span class="type">int</span> u)</span></span>{</span><br><span class="line">	<span class="keyword">while</span>(u/<span class="number">2</span>&amp;&amp;h[u/<span class="number">2</span>]&gt;h[u]){</span><br><span class="line">		<span class="built_in">swap</span>(h[u/<span class="number">2</span>],h[u]);</span><br><span class="line">		u/=<span class="number">2</span>;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+</p></div><div class="share"><span>Share</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=http://example.com/2024/02/20/算法打卡第五期/%20Hexo%20算法打卡第五期"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/2024/02/28/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E5%85%AD%E6%9C%9F/" title="算法打卡第六期"><i class="fa fa-angle-double-left"></i>&nbsp;Previous post: 算法打卡第六期</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2024/02/18/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E5%9B%9B%E6%9C%9F/" title="算法打卡第四期">Next post: 算法打卡第四期&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div><div id="lv-container" data-id="city" data-uid="MTAyMC81OTQ2Ny8zNTkyOQ=="><script type="text/javascript">(function (d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') {
+        return;
+    }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript> Please activate JavaScript for write a comment in LiveRe</noscript></div><div class="foreground background-text" style="color: #fff; padding: 10px 25px; width: 100%"><div style="vertical-align: middle;display: table-cell!important;"><div class="visible-lg visible-sm visible-md" style="vertical-align: middle;text-align:center;margin-right:15px"><img src="/images/pigeon.svg" width="150px" style="padding: 15px; vertical-align: middle;"><p style="font-size: 55%;vertical-align: middle;text-align:center;margin: 0">咕咕咕, 就快送到了</p></div></div><div style="padding: 15px 0;vertical-align: middle;display: table-cell;"><p style="font-size: 115%">哎呀，似乎评论系统在您的地区都无法正常工作。</p><p style="margin:0;">不过不要担心，来看看我们为您准备的备用方案 ——<br>        1. 将您的评论用信封装好<br>        2. 使用信鸽函至1476573945@qq.comexample.com<br>        3. 我们在收到您的评论后将立即审核并更新至网站<br><i><small>评论一经采用，信函恕不退还，信鸽也不退还，请知悉。</small></i></p></div></div></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="http://example.com" rel="noopener noreferrer">John Doe</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>

@@ -111,17 +111,44 @@ mjx-container[display="true"] + br {
   display: none;
 }
 </style><link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">From Swift</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">博客而已</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a class="current" href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li><a href="/about/index.html">about</a></li><li class="soc"><a href="https://github.com/swfnotswift" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="http://example.com/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="http://example.com" rel="noopener noreferrer">John Doe</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-container"><p class="post-title"><a href="/2024/02/02/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96-1/">瑞吉外卖-1</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-02-02</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/Java项目实战/" title="Java项目实战">Java项目实战</a><span>&nbsp;</span><a class="a-tag" href="/tags/瑞吉外卖/" title="瑞吉外卖">瑞吉外卖</a><span>&nbsp;</span></span></p><p class="post-abstract">软件开发流程
-</p></div><div class="post-container"><p class="post-title"><a href="/2024/02/01/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%BA%8C%E6%9C%9F-%E9%AB%98%E7%B2%BE%E5%BA%A6%EF%BC%8C%E5%89%8D%E7%BC%80%E5%92%8C%EF%BC%8C%E5%B7%AE%E5%88%86/">算法打卡第二期-高精度，前缀和，差分</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-02-01</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/寒假算法打卡/" title="寒假算法打卡">寒假算法打卡</a><span>&nbsp;</span></span></p><p class="post-abstract">一些碎碎念略微高估自己寒假在家的效率了寒假打卡第一天共用时三天，因此本系列正式改名算法打卡第n期。
-高精度低位存个位，因为好向后拓展auto 编译器推断自己的类型
-模版  
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">From Swift</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">博客而已</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a class="current" href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li><a href="/about/index.html">about</a></li><li class="soc"><a href="https://github.com/swfnotswift" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="http://example.com/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="http://example.com" rel="noopener noreferrer">John Doe</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-container"><p class="post-title"><a href="/2024/02/28/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E5%85%AD%E6%9C%9F/">算法打卡第六期</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-02-28</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/寒假算法打卡/" title="寒假算法打卡">寒假算法打卡</a><span>&nbsp;</span></span></p><p class="post-abstract">哈希表
+   
+</p></div><div class="post-container"><p class="post-title"><a href="/2024/02/20/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%BA%94%E6%9C%9F/">算法打卡第五期</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-02-20</span></p><p class="post-abstract">Tier
+Trie树，用于快速存储和查找字符串集合的函数 存储字符串的方法 abcdef
+abdef aced bcff ## 并查集 1.将两个 集合合并
+2.询问两个元素是否在一个集合当中
+belong[x]=a if(belong[x] == belong[y])(o1)
+ ###
+基本原理
+...</p></div><div class="post-container"><p class="post-title"><a href="/2024/02/18/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E5%9B%9B%E6%9C%9F/">算法打卡第四期</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-02-18</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/寒假算法打卡/" title="寒假算法打卡">寒假算法打卡</a><span>&nbsp;</span></span></p><p class="post-abstract">链表
+动态链表
   
-前缀和和差分前缀和定义前缀和数组 
+数组模拟链表
+模拟单链表
+最大应用是邻接表，用与储存图和树
+双链表：用于优化某些问题 #### 数组模拟    
+双链表
+  
+e存值 ne存下一个节点的下标值 双链表四个 l[] r[] e[] head
+单调栈和单调队列
+题型比较固定 ### 滑动栈例题
+实现一个...</p></div><div class="post-container"><p class="post-title"><a href="/2024/02/04/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%B8%89%E6%9C%9F/">算法打卡第三期</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-02-04</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/寒假算法打卡/" title="寒假算法打卡">寒假算法打卡</a><span>&nbsp;</span></span></p><p class="post-abstract">双指针算法
+将两个有序序列合并的算法。  1.
+指向两个序列(归并排序) 2. 指向一个序列(快排) ### 一般模版  ### 核心思想
+将朴素算法中的O(n2)优化为O(n).
+由于i，j都是只跑了一遍完整的n，所以运算次数不会超过2n 找单调性。
+   ### 例题1 给一句话，各个英文单词中用空...</p></div><div class="post-container"><p class="post-title"><a href="/2024/02/02/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96-1/">瑞吉外卖-1</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-02-02</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/Java项目实战/" title="Java项目实战">Java项目实战</a><span>&nbsp;</span><a class="a-tag" href="/tags/瑞吉外卖/" title="瑞吉外卖">瑞吉外卖</a><span>&nbsp;</span></span></p><p class="post-abstract">软件开发流程
+</p></div><div class="post-container"><p class="post-title"><a href="/2024/02/01/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%BA%8C%E6%9C%9F-%E9%AB%98%E7%B2%BE%E5%BA%A6%EF%BC%8C%E5%89%8D%E7%BC%80%E5%92%8C%EF%BC%8C%E5%B7%AE%E5%88%86/">算法打卡第二期-高精度，前缀和，差分</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-02-01</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/寒假算法打卡/" title="寒假算法打卡">寒假算法打卡</a><span>&nbsp;</span></span></p><p class="post-abstract">一些碎碎念
+略微高估自己寒假在家的效率了
+寒假打卡第一天共用时三天，因此本系列正式改名算法打卡第n期。
+高精度
 
-S_i=a_1+a_2+...+a_n
-如何求Si
- S_i=S_{i-1}+a_ii
-作用 快...</p></div><div class="post-container"><p class="post-title"><a href="/2024/01/29/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%B8%80%E5%A4%A9-%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E4%BA%8C%E5%88%86/">算法打卡第一天--排序归并二分</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-01-29</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/寒假算法打卡/" title="寒假算法打卡">寒假算法打卡</a><span>&nbsp;</span></span></p><p class="post-abstract">
+低位存个位，因为好向后拓展 auto 编译器推断自己的类型 ### 模版
+     
+前缀和和差分
+前缀和
+定义
+前缀和数组  1. 如何求Si  2. 作用 快速求一段区间内数的...</p></div><div class="post-container"><p class="post-title"><a href="/2024/01/29/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%B8%80%E5%A4%A9-%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E4%BA%8C%E5%88%86/">算法打卡第一天--排序归并二分</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-01-29</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/寒假算法打卡/" title="寒假算法打卡">寒假算法打卡</a><span>&nbsp;</span></span></p><p class="post-abstract">
 [[#每日任务：|每日任务：]]
 [[#快排|快排]]
 [[#快排#主要步骤|主要步骤]]
