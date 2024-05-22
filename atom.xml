@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-02-29T06:37:20.092Z</updated>
+  <updated>2024-05-22T14:50:27.764Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,83 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>docker学习</title>
+    <link href="http://example.com/2024/05/22/docker%E5%AD%A6%E4%B9%A0-1/"/>
+    <id>http://example.com/2024/05/22/docker%E5%AD%A6%E4%B9%A0-1/</id>
+    <published>2024-05-22T14:50:27.000Z</published>
+    <updated>2024-05-22T14:50:27.764Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>docker学习</title>
+    <link href="http://example.com/2024/04/06/docker%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2024/04/06/docker%E5%AD%A6%E4%B9%A0/</id>
+    <published>2024-04-06T07:22:28.000Z</published>
+    <updated>2024-05-22T15:24:05.191Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;docker&quot;&gt;## Docker&lt;/h2&gt;
+&lt;p&gt;用于快速交付应用运行应用的技术.
+运用沙箱机制形成隔离容器，进行部署和交付 ## 镜像（image）
+Docker中将应用程序和所需的依赖函数库环境等文件打包在一起 ##</summary>
+        
+      
+    
+    
+    
+    
+    <category term="开发学习" scheme="http://example.com/tags/%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试</title>
+    <link href="http://example.com/2024/03/30/%E9%9D%A2%E8%AF%95/"/>
+    <id>http://example.com/2024/03/30/%E9%9D%A2%E8%AF%95/</id>
+    <published>2024-03-30T08:04:49.000Z</published>
+    <updated>2024-03-30T08:10:22.355Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;设计模式问题&quot;&gt;设计模式问题&lt;/h1&gt;
+&lt;p&gt;设计模式的分类</summary>
+        
+      
+    
+    
+    
+    
+    <category term="面试补缺补漏" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95%E8%A1%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>算法打卡第六期</title>
     <link href="http://example.com/2024/02/28/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E5%85%AD%E6%9C%9F/"/>
     <id>http://example.com/2024/02/28/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E5%85%AD%E6%9C%9F/</id>
     <published>2024-02-28T08:56:54.000Z</published>
-    <updated>2024-02-29T06:37:20.092Z</updated>
+    <updated>2024-03-02T06:07:40.754Z</updated>
     
     
       
@@ -45,7 +117,7 @@
     <link href="http://example.com/2024/02/20/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%BA%94%E6%9C%9F/"/>
     <id>http://example.com/2024/02/20/%E7%AE%97%E6%B3%95%E6%89%93%E5%8D%A1%E7%AC%AC%E4%BA%94%E6%9C%9F/</id>
     <published>2024-02-20T08:16:55.000Z</published>
-    <updated>2024-02-28T08:55:53.118Z</updated>
+    <updated>2024-03-30T01:48:29.642Z</updated>
     
     
       
