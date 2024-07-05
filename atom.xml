@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-22T14:50:27.764Z</updated>
+  <updated>2024-07-02T03:10:20.177Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,19 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>docker学习</title>
-    <link href="http://example.com/2024/05/22/docker%E5%AD%A6%E4%B9%A0-1/"/>
-    <id>http://example.com/2024/05/22/docker%E5%AD%A6%E4%B9%A0-1/</id>
-    <published>2024-05-22T14:50:27.000Z</published>
-    <updated>2024-05-22T14:50:27.764Z</updated>
+    <title>FastApI学习</title>
+    <link href="http://example.com/2024/07/01/FastApI%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2024/07/01/FastApI%E5%AD%A6%E4%B9%A0/</id>
+    <published>2024-07-01T09:27:12.000Z</published>
+    <updated>2024-07-02T03:10:20.177Z</updated>
     
     
       
       
         
         
-    <summary type="html">
-</summary>
+    <summary type="html">&lt;h2 id=&quot;开始的补充&quot;&gt;## 开始的补充&lt;/h2&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="python" scheme="http://example.com/tags/python/"/>
+    
+    <category term="FastApi" scheme="http://example.com/tags/FastApi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2024/06/07/SAD%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/SAD%E7%9A%84%E5%9B%BE/"/>
+    <id>http://example.com/2024/06/07/SAD%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/SAD%E7%9A%84%E5%9B%BE/</id>
+    <published>2024-06-07T07:08:54.210Z</published>
+    <updated>2024-06-07T11:24:21.589Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;pert-图&quot;&gt;1.pert 图&lt;/h2&gt;
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -39,11 +65,58 @@
   </entry>
   
   <entry>
+    <title>SAD期末复习</title>
+    <link href="http://example.com/2024/06/07/SAD%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+    <id>http://example.com/2024/06/07/SAD%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+    <published>2024-06-07T06:15:45.000Z</published>
+    <updated>2024-06-07T06:57:41.636Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;第一章&quot;&gt;## 第一章&lt;/h2&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="大三期末复习" scheme="http://example.com/tags/%E5%A4%A7%E4%B8%89%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>langchain</title>
+    <link href="http://example.com/2024/05/31/langchain/"/>
+    <id>http://example.com/2024/05/31/langchain/</id>
+    <published>2024-05-31T11:30:22.000Z</published>
+    <updated>2024-07-05T02:22:01.085Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;start&quot;&gt;##</summary>
+        
+      
+    
+    
+    
+    
+    <category term="langchain学习" scheme="http://example.com/tags/langchain%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>docker学习</title>
     <link href="http://example.com/2024/04/06/docker%E5%AD%A6%E4%B9%A0/"/>
     <id>http://example.com/2024/04/06/docker%E5%AD%A6%E4%B9%A0/</id>
     <published>2024-04-06T07:22:28.000Z</published>
-    <updated>2024-05-22T15:24:05.191Z</updated>
+    <updated>2024-07-05T02:35:48.179Z</updated>
     
     
       
@@ -51,7 +124,7 @@
         
         
     <summary type="html">&lt;h2 id=&quot;docker&quot;&gt;## Docker&lt;/h2&gt;
-&lt;p&gt;用于快速交付应用运行应用的技术.
+&lt;p&gt;用于快速交付应用运行应用的技术
 运用沙箱机制形成隔离容器，进行部署和交付 ## 镜像（image）
 Docker中将应用程序和所需的依赖函数库环境等文件打包在一起 ##</summary>
         
@@ -196,7 +269,7 @@ abdef aced bcff ## 并查集 1.将两个</summary>
       
         
         
-    <summary type="html">&lt;h1 id=&quot;软件开发流程&quot;&gt;&lt;a href=&quot;#软件开发流程&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;软件开发流程&quot;&gt;#</summary>
         
       
     
@@ -249,9 +322,10 @@ abdef aced bcff ## 并查集 1.将两个</summary>
 &lt;li&gt;[[#每日任务：|每日任务：]]&lt;/li&gt;
 &lt;li&gt;[[#快排|快排]]&lt;/li&gt;
 &lt;li&gt;[[#快排#主要步骤|主要步骤]]&lt;/li&gt;
-&lt;li&gt;[[#快排#几种做法|几种做法]]&lt;ul&gt;
+&lt;li&gt;[[#快排#几种做法|几种做法]]
+&lt;ul&gt;
 &lt;li&gt;[[#几种做法#第一种|第一种]]&lt;/li&gt;
-&lt;li&gt;[[#几种</summary>
+&lt;</summary>
         
       
     
@@ -274,7 +348,7 @@ abdef aced bcff ## 并查集 1.将两个</summary>
       
         
         
-    <summary type="html">&lt;h1 id=&quot;这是我用hexo写的第一篇博客&quot;&gt;&lt;a href=&quot;#这是我用hexo写的第一篇博客&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1</summary>
         
       
     
@@ -297,7 +371,8 @@ abdef aced bcff ## 并查集 1.将两个</summary>
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very
+first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
         
       
     

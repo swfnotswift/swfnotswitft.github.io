@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>docker学习 · Hexo</title><meta name="description" content="## Docker
-用于快速交付应用运行应用的技术.
+用于快速交付应用运行应用的技术
 运用沙箱机制形成隔离容器，进行部署和交付 ## 镜像（image）
 Docker中将应用程序和所需的依赖函数库环境等文件打包在一起 ## 容器
 Container
-镜像中应用程序运行后形成的进程就是容器，Docker会给容器做隔离对外不"><meta name="og:description" content="## Docker
-用于快速交付应用运行应用的技术.
+镜像中应用程序运行后形成的进程就是容器，Docker会给容器做隔离对外不可"><meta name="og:description" content="## Docker
+用于快速交付应用运行应用的技术
 运用沙箱机制形成隔离容器，进行部署和交付 ## 镜像（image）
 Docker中将应用程序和所需的依赖函数库环境等文件打包在一起 ## 容器
 Container
-镜像中应用程序运行后形成的进程就是容器，Docker会给容器做隔离对外不"><meta name="twitter:site" content="Hexo"><meta name="twitter:title" content="docker学习"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.1.1"><style>mjx-container[jax="SVG"] {
+镜像中应用程序运行后形成的进程就是容器，Docker会给容器做隔离对外不可"><meta name="twitter:site" content="Hexo"><meta name="twitter:title" content="docker学习"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 7.1.1"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
 
@@ -122,7 +122,7 @@ mjx-container[display="true"] + br {
 }
 </style><link rel="stylesheet" href="/css/prism.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">From Swift</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">博客而已</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">Home</a></li><li><a href="/archives">Archive</a></li><li><a href="/tags">Tags</a></li><li><a href="/about/index.html">about</a></li><li class="soc"><a href="https://github.com/swfnotswift" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="http://example.com/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="http://example.com" rel="noopener noreferrer">John Doe</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>docker学习</a></p><p class="post-meta"><span class="date meta-item">Posted at&nbsp;2024-04-06</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/开发学习/" title="开发学习">开发学习</a><span>&nbsp;</span></span></p><p class="post-abstract"><h2 id="docker">## Docker</h2>
-<p>用于快速交付应用运行应用的技术.
+<p>用于快速交付应用运行应用的技术
 运用沙箱机制形成隔离容器，进行部署和交付 ## 镜像（image）
 Docker中将应用程序和所需的依赖函数库环境等文件打包在一起 ## 容器
 Container
@@ -131,9 +131,113 @@ Container
 <p>服务端：接受命令或远程请求，操作镜像或容器
 客户端：发送命令或者请求到Docker服务端</p>
 <h2 id="常用命令">## 常用命令</h2>
-<p>` <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">docker pull 拉取镜像</span><br><span class="line">docker push 推送镜像</span><br><span class="line"></span><br><span class="line">docker build 构建镜像</span><br><span class="line">通过DOCKERFILE</span><br><span class="line">docker save 保存压缩文件</span><br><span class="line">docker load 传递</span><br><span class="line"></span><br><span class="line">docker rmi 删除镜像</span><br><span class="line"></span><br><span class="line">docker stop 停止镜像</span><br><span class="line">docker start 启动镜像</span><br><span class="line"></span><br><span class="line">docker ps 查看当前运行的进程</span><br><span class="line">docker logs 查看日志</span><br><span class="line"></span><br><span class="line">docker exec 进入容器内部</span><br><span class="line"></span><br><span class="line">docker push 回收镜像</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">docker run -d \</span><br><span class="line"></span><br><span class="line">  --name mysql \</span><br><span class="line"></span><br><span class="line">  -p 3306:3306 \</span><br><span class="line">\\端口映射 前为宿主机端口，后为容器端口</span><br><span class="line">  -e TZ=Asia/Shanghai \</span><br><span class="line"></span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=123 \</span><br><span class="line"></span><br><span class="line">  mysql</span><br><span class="line">  -e为镜像所需要配置的环境变量，为镜像制作者决定</span><br><span class="line">  可从中查询https://hubgw.docker.com/</span><br><span class="line">  查询方式为</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p><img src="file:///C:\Users\V700\AppData\Roaming\Tencent\Users\1476573945\QQ\WinTemp\RichOle\E40KWJHVRM%5BKP%7BJAV3$RAA9.png"></p>
-</p></div><div class="share"><span>Share</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=http://example.com/2024/04/06/docker学习/%20Hexo%20docker学习"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/2024/05/22/docker%E5%AD%A6%E4%B9%A0-1/" title="docker学习"><i class="fa fa-angle-double-left"></i>&nbsp;Previous post: docker学习</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2024/03/30/%E9%9D%A2%E8%AF%95/" title="面试">Next post: 面试&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div><div id="lv-container" data-id="city" data-uid="MTAyMC81OTQ2Ny8zNTkyOQ=="><script type="text/javascript">(function (d, s) {
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">docker pull 拉取镜像</span><br><span class="line">docker push 推送镜像</span><br><span class="line"></span><br><span class="line">docker build 构建镜像</span><br><span class="line">通过DOCKERFILE</span><br><span class="line">docker save 保存压缩文件</span><br><span class="line">docker load 传递</span><br><span class="line"></span><br><span class="line">docker rmi 删除镜像</span><br><span class="line"></span><br><span class="line">docker -o nginx.tar nginx:latest</span><br><span class="line"></span><br><span class="line">docker load -i nginx.tar </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">docker stop 停止镜像</span><br><span class="line">docker start 启动镜像</span><br><span class="line"></span><br><span class="line">docker ps 查看当前运行的进程</span><br><span class="line">docker logs 查看日志</span><br><span class="line"></span><br><span class="line">docker exec 进入容器内部</span><br><span class="line"></span><br><span class="line">docker push 回收镜像</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">docker run -d \</span><br><span class="line"></span><br><span class="line">  --name mysql \</span><br><span class="line"></span><br><span class="line">  -p 3306:3306 \</span><br><span class="line">\\端口映射 前为宿主机端口，后为容器端口</span><br><span class="line">  -e TZ=Asia/Shanghai \</span><br><span class="line"></span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=123 \</span><br><span class="line"></span><br><span class="line">  mysql</span><br><span class="line">  -e为镜像所需要配置的环境变量，为镜像制作者决定</span><br><span class="line">  可从中查询https://hubgw.docker.com/</span><br><span class="line">  查询方式为</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<!-- ![](file:///C:\Users\V700\AppData\Roaming\Tencent\Users\1476573945\QQ\WinTemp\RichOle\E40KWJHVRM[KP{JAV3$RAA9.png) -->
+<h2 id="数据卷挂载">## 数据卷挂载</h2>
+<p>部署静态资源 需求：创建Nginx容器，修改nginx容器内的html文件
+<strong>数据卷</strong>是虚拟目录，是容器内目录和宿主机目录之间映射的桥梁</p>
+<table>
+<thead>
+<tr class="header">
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>docker volume create</td>
+<td>创建数据卷</td>
+</tr>
+<tr class="even">
+<td>docker volume ls</td>
+<td>查看所有数据卷</td>
+</tr>
+<tr class="odd">
+<td>docker volume rm</td>
+<td>删除指定数据卷</td>
+</tr>
+<tr class="even">
+<td>docker volumn inspect</td>
+<td>查看某个数据卷的详情</td>
+</tr>
+<tr class="odd">
+<td>docker volume prune</td>
+<td>清除数据卷</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name nginx -p 80:80 -v html:/usr/share/nginx/html  nginx</span><br></pre></td></tr></table></figure>
+<h2 id="docker-file">Docker File</h2>
+<p><strong>部署一个JAVA应用的步骤</strong> 1、准备一个Linux服务器
+2、安装JRE并且配置环境变量 3、拷贝JRE 4、运行JRE</p>
+<p><strong>构建一个JAVA镜像的步骤</strong> 1、准备一个Linux运行环境
+2、安装JRE配置环境变量 3、拷贝Jar包 4、编写运行脚本</p>
+<p><strong>层Layer</strong> 添加安装包依赖配置等，每次操作形成新的层</p>
+<p><strong>基础镜像 BaseImage</strong>
+应用依赖的系统函数库、环境、配置、文件等</p>
+<p><strong>Dockerfile</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 37%">
+<col style="width: 44%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>指令</th>
+<th>说明</th>
+<th>示例</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FROM</td>
+<td>指定基础镜像</td>
+<td>FROM centos：6</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>COPY</td>
+<td>拷贝本地文件到镜像的指定目录</td>
+<td>COPY ./jrz /tmp</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>ENV</td>
+<td>设置环境变量，可在后面指令使用</td>
+<td>ENV key value</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>RUN</td>
+<td>执行Linux的shell命令，一般是安装过程的命令</td>
+<td>RUN tar -zxvf /tmp/jre11.tar.gz</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>EXPORTS</td>
+<td>指定容器运行时监听的端口，是给镜像使用者看的</td>
+<td>EXPOSE 8080</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ENTRYPOINT</td>
+<td>镜像中应用的启动命令，容器运行时调用</td>
+<td>ENTRYPOINT java -jar xx.jar</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>构建</strong> docker -build -t myImage:1.0 .</p>
+<p>.代表DockerFILE所在的目录 .表示当前目录，dockerfile在相同目录中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"># Nginx</span><br><span class="line">#</span><br><span class="line"># VERSION               0.0.1</span><br><span class="line"></span><br><span class="line">FROM      ubuntu</span><br><span class="line">MAINTAINER Victor Vieux &lt;victor@docker.com&gt;</span><br><span class="line"></span><br><span class="line">RUN apt-get update &amp;&amp; apt-get install -y inotify-tools nginx apache2 openssh-server</span><br><span class="line"></span><br><span class="line"># Firefox over VNC</span><br><span class="line">#</span><br><span class="line"># VERSION               0.3</span><br><span class="line"></span><br><span class="line">FROM ubuntu</span><br><span class="line"></span><br><span class="line"># Install vnc, xvfb in order to create a 'fake' display and firefox</span><br><span class="line">RUN apt-get update &amp;&amp; apt-get install -y x11vnc xvfb firefox</span><br><span class="line">RUN mkdir /.vnc</span><br><span class="line"># Setup a password</span><br><span class="line">RUN x11vnc -storepasswd 1234 ~/.vnc/passwd</span><br><span class="line"># Autostart firefox (might not be the best way, but it does the trick)</span><br><span class="line">RUN bash -c 'echo "firefox" &gt;&gt; /.bashrc'</span><br><span class="line"></span><br><span class="line">EXPOSE 5900</span><br><span class="line">CMD    ["x11vnc", "-forever", "-usepw", "-create"]</span><br><span class="line"></span><br><span class="line"># Multiple images example</span><br><span class="line">#</span><br><span class="line"># VERSION               0.1</span><br><span class="line"></span><br><span class="line">FROM ubuntu</span><br><span class="line">RUN echo foo &gt; bar</span><br><span class="line"># Will output something like ===&gt; 907ad6c2736f</span><br><span class="line"></span><br><span class="line">FROM ubuntu</span><br><span class="line">RUN echo moo &gt; oink</span><br><span class="line"># Will output something like ===&gt; 695d7793cbe4</span><br><span class="line"></span><br><span class="line"># You᾿ll now have two images, 907ad6c2736f with /bar, and 695d7793cbe4 with</span><br><span class="line"># /oink.</span><br></pre></td></tr></table></figure>
+<h1 id="网络">网络</h1>
+<p>docker ps 各个容器是独立空间 ### 自定义网络</p>
+<p>加入自定义网络的容器可以通过容器名相互访问 <strong>docker network
+create</strong> 创建一个网络</p>
+</p></div><div class="share"><span>Share</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=http://example.com/2024/04/06/docker学习/%20Hexo%20docker学习"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/2024/05/31/langchain/" title="langchain"><i class="fa fa-angle-double-left"></i>&nbsp;Previous post: langchain</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2024/03/30/%E9%9D%A2%E8%AF%95/" title="面试">Next post: 面试&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div><div id="lv-container" data-id="city" data-uid="MTAyMC81OTQ2Ny8zNTkyOQ=="><script type="text/javascript">(function (d, s) {
     var j, e = d.getElementsByTagName(s)[0];
     if (typeof LivereTower === 'function') {
         return;
